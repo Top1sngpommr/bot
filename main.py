@@ -37,7 +37,7 @@ def echo(update, context):
         for i in zxc['response']['hits']:
             if i["result"]['full_title'] == z:
                 update.message.reply_text(i["result"]["url"])
-    else:
+    elif z != "/start":
         options = []
         zxc = make_request(z)
         if zxc['response']['hits'] == []:
